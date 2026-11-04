@@ -1,0 +1,9 @@
+project: savantenvs/emscripten
+target: fuzz_emscripten_mmap
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_emscripten_mmap/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_emscripten_mmap
+    libfuzzer: true
+    timeout: 30

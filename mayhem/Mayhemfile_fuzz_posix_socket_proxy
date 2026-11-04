@@ -1,0 +1,9 @@
+project: savantenvs/emscripten
+target: fuzz_posix_socket_proxy
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_posix_socket_proxy/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_posix_socket_proxy
+    libfuzzer: true
+    timeout: 30
